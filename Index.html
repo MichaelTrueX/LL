@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tagalog Explorer: An Interactive Learning Game</title>
+  <div id="authStatus" style="position: absolute; top: 10px; right: 10px;">
+    <button id="loginBtn">Login</button>
+    <button id="createUserBtn">Create New User</button>
+  </div>
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" defer></script>
+  <!-- Our JavaScript Modules -->
+  <script src="js/utils.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/csvLoader.js" defer></script>
+  <script src="js/flashcards.js" defer></script>
+  <script src="js/sentenceBuilder.js" defer></script>
+  <script src="js/translationQuiz.js" defer></script>
+  <script src="js/grammarExplorations.js" defer></script>
+  <script type="module" src="js/challengeMode.js"></script>
+  <script src="js/progressGraph.js" defer></script>
+  <script src="js/uploadDictionary.js" defer></script>
+  <script src="js/dictionaryUI.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/app.js" defer></script>
+  
+  
+</head>
+
+<body>
+  <div id="container">
+    <header style="position: relative;">
+      <h1>Tagalog Explorer</h1>
+      <p>An Interactive Learning Game for Tagalog</p>
+      <!-- "User Words" shows the count of words in the userWordsStore -->
+      <div id="wordStatus">User Words: 0</div>
+      <!-- "Words in Dictionary" shows the count of dictionary entries in dictionaryStore -->
+      <div id="dictStatus">Words in Dictionary: 0</div>
+      <!-- Auth status will be displayed in the upper right corner -->
+      <div id="authStatus" style="position: absolute; top: 10px; right: 10px;"></div>
+    </header>
+    
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Trainings</a>
+          <ul class="dropdown-content">
+            <li><a href="#" id="flashcardsBtn">Flashcards</a></li>
+            <li><a href="#" id="sentenceBuilderBtn">Sentence Builder</a></li>
+            <li><a href="#" id="translationQuizBtn">Translation Quiz</a></li>
+            <li><a href="#" id="challengeModeBtn">Challenge Mode</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="progressGraphBtn">Progress Graph</a></li>
+        <li><a href="#" id="grammarExplorationsBtn">Grammar Explorations</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Configuration</a>
+          <ul class="dropdown-content">
+            <li><a href="#" id="userWordsBtn">User Words</a></li>
+            <li><a href="#" id="dictUploadBtn">Upload Dictionary CSV</a></li>
+            <li><a href="#" id="dictionaryBtn">Dictionary</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+   
+    <section id="content">
+      <!-- Dynamic content loads here -->
+    </section>
+    
+    
+    <footer>
+      <p>TrueX</p>
+    </footer>
+  </div>
+</body>
+</html>

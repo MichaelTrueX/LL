@@ -1,0 +1,408 @@
+/* Global Reset & Container Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #ecf0f1;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+}
+
+header {
+  position: relative;
+  background: #34495e;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#authStatus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+footer {
+  background: #34495e;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header #wordStatus {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #ecf0f1;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #2c3e50;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #2c3e50;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li a {
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background: #2980b9;
+}
+
+.card, .quiz-card {
+  border: 1px solid #bdc3c7;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+button {
+  margin: 10px 5px;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+#sentenceBuilder {
+  text-align: center;
+}
+
+#sentenceBuilder .word-bank {
+  margin: 20px 0;
+}
+
+#sentenceBuilder .draggable-word {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #bdc3c7;
+  border: 1px solid #7f8c8d;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+#sentenceBuilder .drop-zone {
+  min-height: 50px;
+  border: 2px dashed #7f8c8d;
+  margin: 20px;
+  padding: 10px;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.feedback.success {
+  color: #2ecc71;
+}
+
+.feedback.error {
+  color: #e74c3c;
+}
+
+#grammarExplorations ul {
+  padding-left: 20px;
+}
+
+#grammarExplorations li {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#grammarExplorations li:hover {
+  background: #ecf0f1;
+}
+
+#grammarDetail {
+  border: 1px solid #bdc3c7;
+  padding: 10px;
+  margin-top: 10px;
+  background: #f9f9f9;
+}
+
+#progressGraph {
+  text-align: center;
+}
+
+#knowledgeSlider {
+  width: 80%;
+  margin: 10px 0;
+}
+
+#csvUploadPrompt {
+  text-align: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+table button {
+  padding: 4px 8px;
+  margin: 0 2px;
+  font-size: 0.9em;
+}
+
+.draggable-word {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: move;
+}
+
+.drop-zone {
+  min-height: 50px;
+  border: 2px dashed #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #container {
+    width: 95%;
+    box-shadow: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .card, .quiz-card {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  table, th, td {
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #container {
+    max-width: 1400px;
+  }
+}
+
+/* Challenge Mode Layout */
+.challenge-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Filter Panel Styling */
+.filter-panel {
+  flex: 1 1 600px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.filter-panel fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.filter-panel legend {
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-panel label {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+/* Game Panel Styling */
+.game-panel {
+  flex: 1 1 600px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Scoreboard Table */
+.scoreboard-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.scoreboard-table th,
+.scoreboard-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.scoreboard-table th {
+  background-color: #f2f2f2;
+}
+
+/* Back Button */
+.back-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #2980b9;
+}
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.user-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  right: 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.user-menu .dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.user-menu .dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.user-menu:hover .dropdown-content {
+  display: block;
